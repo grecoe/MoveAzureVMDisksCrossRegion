@@ -1,0 +1,10 @@
+{
+	"SubscriptionId" : "SOURCE_SUB_ID",
+	"ResourceGroup" : "SOURCE_SUB_RG",
+	"DiskName" : [ "DISK_1", "DISK2"],
+	"DestinationSubscriptionId" : "DESTINATION_SUB_ID",
+    "DestinationResourceGroup" : "DESTINATION_RG",
+    "DestinationRegion" : "DESTINATION_REGION",
+    "InterimStorageAccount" : "STORAGE_ACCT_NAME_IN_SOURCE_RG",
+    "InterimStorageKey" : "STORAGE_ACCT_KEY_IN_SOURCE_RG"
+}

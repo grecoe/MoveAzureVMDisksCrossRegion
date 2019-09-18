@@ -28,3 +28,11 @@ This is going to take a while, and it's suggested that you run this on a VM some
 
 Be patient :) The call to Start-AzureStorageBlobCopy can take up to 2 hours to move a 127GB disk, it's painful. 
 
+## Create VM
+Go to the new subscription where you copied the disks. Click on the OS disk of the VM and you should see the CreateVM button available.
+- Click CreateVM
+- During the configuration process you can attach other disks before creating the VM.
+- Open whatever ports you need, or do it later after creation.
+- Once created, in the portal, change your user password to the VM
+- Log in
+

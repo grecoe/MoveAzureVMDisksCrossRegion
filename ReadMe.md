@@ -17,6 +17,7 @@ However, there are times when you need to move the machine to a different region
 - A list of disk associated with the subscription
 - A destination region.
 - A NEW storage account in the source resource group but created in the desired destination region.
+  - For example, if you want to move the disk to South Central US, create the new storage account in South Central US.  
 - Destination subscription ID where the VM will move to, this can be the same as the source subscription ID.
 - Destination resource group name, this MUST be different than the source resource group name if moving to the same subscription, but can be the same if the destination subscription is different.
 
@@ -26,7 +27,9 @@ However, there are times when you need to move the machine to a different region
 ## Execute MoveDisks.ps1
 This is going to take a while, and it's suggested that you run this on a VM somewhere in Azure so that you are SURE the machine will NOT got to sleep. Using Start-AzureStorageBlobCopy is a painfully long executing task, particularly when you are moving a 100GB+ file. 
 
-Be patient :) The call to Start-AzureStorageBlobCopy can take up to 2 hours to move a 127GB disk, it's painful. 
+Be patient :) 
+
+Interestingly, using the [Azure Upload Tool](http://www.azurespeed.com/Azure/Upload) shows that moving data between regions runs about 373kbs and I experienced around 339kbs for the regions I was coming from/to. 
 
 ## Create VM
 Go to the new subscription where you copied the disks. Click on the OS disk of the VM and you should see the CreateVM button available.
